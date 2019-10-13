@@ -2,21 +2,148 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+@keyframes float {
+	0% {		
+		transform: translatey(0px);
+	}
+	50% {		
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sphere {
+  border-radius : 50%;
+  border:1px solid #000;
+  background-color:black;
+  width:50px;
+  height:50px;
+  margin: 20px;
+  display:inline-block;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  cursor:pointer;
 }
 
-.App-link {
-  color: #09d3ac;
+.sphere1 {
+  border-radius : 50%;
+  border:1px solid rgb(211, 39, 154);
+  background: radial-gradient(circle at 100px 100px, rgb(211, 39, 154), #000);
+  width:50px;
+  height:50px;
+  margin: 20px;
+  display:inline-block;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  cursor:pointer;
+}
+
+.sphere3 {
+  border-radius : 50%;
+  border:1px solid rgb(159, 211, 39);
+  background: radial-gradient(circle at 100px 100px, rgb(159, 211, 39), #000);
+  width:50px;
+  height:50px;
+  margin: 20px;
+  display:inline-block;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  cursor:pointer;
+}
+
+.sphere4 {
+  border-radius : 50%;
+  border:1px solid rgb(211, 136, 39);
+  background: radial-gradient(circle at 100px 100px, #5cabff, #000);
+  width:50px;
+  height:50px;
+  margin: 20px;
+  display:inline-block;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  cursor:pointer;
+}
+
+
+
+.container {
+  border:2px solid blue;
+  width:500px;
+  height:303px;
+  float:left;
+  margin:10px;
+  border-top:2px solid #fff;
+  border-radius:5px;
+}
+
+.container1 {
+  border:2px solid blue;
+  width:500px;
+  height:303px;
+  float:right;
+  margin:10px;
+  border-top: 2px solid #fff;
+  border-radius:5px;
+}
+
+.water {
+  width:500px;
+  margin-top:-43px;
+  height:250px;
+  background-color: rgb(50, 211, 223);
+}
+
+.leftarrow {
+  
+}
+
+.rightarrow {
+  
+}
+
+.arrowcontainer {
+  display: inline-block;
+  width: 10px;
+  margin: 140px;
+}
+
+.container-left {
+  cursor:pointer;
+  margin-top:12px;
+  width:150px;
+  height:40px;
+  background-color:rgb(206, 203, 30);
+  position:relative;
+}
+
+.container-right {
+  cursor:pointer;
+  width:150px;
+  height:40px;
+  background-color:rgb(206, 203, 30);
+  position:relative;
+}
+
+.arrow-right {
+width: 0; 
+height: 0; 
+border-top: 20px solid transparent; 
+border-bottom: 20px solid transparent; /* 40px height (20+20) */
+border-left: 20px solid rgb(206, 203, 30);
+  position:absolute;
+  right:-20px;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 25px solid rgb(206, 203, 30);
+  position: absolute;
+  left: -32px;
+  top: 7px;
+  transform: rotate(90deg);
 }
